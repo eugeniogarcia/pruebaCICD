@@ -10,6 +10,7 @@ node {
         checkout scm
     }
 
+	
 	stage('Construye') {
 		def mvnHome = tool 'miMaven'
 
