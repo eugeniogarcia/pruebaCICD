@@ -13,7 +13,8 @@ node {
 	stage('Construye') {
 		def mvnHome = tool 'miMaven'
 
-		sh "${mvnHome}/bin/mvn clean verify -B"
+		//sh "${mvnHome}/bin/mvn clean verify -B"
+		BAT "${mvnHome}\\bin\\mvn clean verify -B"
 		
 		junit testResults: '**/surefire-reports/*.xml'
     }
